@@ -1,13 +1,27 @@
 // html 코드 = JSX
 // html 코드를 감싸고 있는 function = component
 function App() {
+  const number = Math.ceil(Math.random() * 100);
+
   return (
     <div>
-      <h1>hello world</h1>
-      <MyComp />
-      <MyComp2 />
+      <h1>난수 : {number}</h1>      
+      <h1>{number > 50 ? "큰 수" : "작은 수"}</h1>
+      <h1>{number > 50 ? <BigImage /> : <SmallImage />}</h1>
     </div>
   );
+}
+
+function BigImage() {
+  return (
+    <h1>큰 이미지</h1>
+  )
+}
+
+function SmallImage() {
+  return (
+    <h1>작은 이미지</h1>
+  )
 }
 
 // 브라우저에서 기본적으로 제공해주는 태그(built-id component) <div><h1>은 소문자로 시작
@@ -31,6 +45,7 @@ function MyComp2() {
       <h1>hello {name}</h1>
       <h1>{age} years</h1>
       <h1>{name + "선수"}</h1>
+      <h1>{age + 5}</h1>
       {/* 주석은 이렇게 쓴다 */}
     </>
   );
