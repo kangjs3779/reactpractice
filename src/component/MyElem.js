@@ -1,5 +1,8 @@
 // 다른 파일에서 사용 가능하도록 export
 
+ const country = "Korea";
+ const text = "hello";
+ const value = 77;
 
 export function MyElem() {
     return (
@@ -8,3 +11,14 @@ export function MyElem() {
       </div>
     )
   }
+
+export function MyNavbar() {
+  return null;
+}
+
+export function MyContent() {
+  return null;
+}
+
+// export를 모아서 따로 해도 된다
+export {country, text, value};
