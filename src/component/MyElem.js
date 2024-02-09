@@ -20,5 +20,5 @@ export function MyContent() {
   return null;
 }
 
-// export를 모아서 따로 해도 된다
+// export를 모아서 따로 해도 된다  
 export {country, text, value};
